@@ -2,17 +2,17 @@ import { useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import React from "react"
-import { FaArrowRight, FaDiscord } from "react-icons/fa"
+// import { FaArrowRight, FaDiscord } from "react-icons/fa"
 import {
   heading1,
   heading2,
   description,
-  btnText1,
-  btnText2,
+  // btnText1,
+  // btnText2,
   topCard,
   backCard,
-  openSeaUrl,
-  discordUrl,
+  // openSeaUrl,
+  // discordUrl,
 } from "../constants/constants"
 
 interface CardProps {
@@ -143,7 +143,7 @@ const Hero = () => {
             {description}
           </p>
 
-          <div className="flex flex-col items-center space-x-4 space-y-4 sm:flex-row sm:space-y-0">
+          {/* <div className="flex flex-col items-center space-x-4 space-y-4 sm:flex-row sm:space-y-0">
             <Link href={discordUrl} passHref>
               <a>
                 <div className="flex w-fit space-x-2 rounded-2xl bg-gray-600 px-4 py-3 font-semibold shadow-lg transition-all duration-300 hover:-translate-y-[1px] hover:bg-gray-700">
@@ -159,7 +159,7 @@ const Hero = () => {
                 </div>
               </a>
             </Link>
-          </div>
+          </div> */}
         </div>
 
         <div className="ml-10 flex justify-center">

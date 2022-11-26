@@ -36,7 +36,7 @@ export const permissions = "2022 Inkplate Technologies"
 
 // ---HERO TEXT---
 export const heading1 = "Inkplate"
-export const heading2 = "NFT Project"
+export const heading2 = "Art Collections"
 export const description = `
   Meet a collection of 1000+ amazing figures
   with different attributes and styles!
