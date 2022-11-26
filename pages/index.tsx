@@ -13,7 +13,7 @@ const Home: NextPage = () => {
   return (
     <main className="w-full pt-24">
       <Hero />
-      <Gallery />
+      {/* <Gallery /> */}
       <section id="features">
         {features.map(
           (feature: {

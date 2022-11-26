@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import React from "react"
@@ -22,9 +23,39 @@ interface CardProps {
   image: string
   skewX: string
   skewY: string
-  btnUrl: string
+  // btnUrl: string
   alt: string
   profileAlt: string
+}
+
+// useEffect(() => {
+//   const script = document.createElement("script")
+//   script.src = "https://checkout.flutterwave.com/v3.js"
+//   document.getElementsByTagName("head")[0].appendChild(script)
+// }, [])
+
+const payNow:any = (e) => {
+  alert(
+    "Hi there! You about to proceed payment of USD100 for this Art as an inquiry/service fee, Click Ok to continue"
+  )
+  e.preventDefault()
+  return window.FlutterwaveCheckout({
+    public_key: "FLWPUBK-00f1a8bfd678ad383f650cd6cccd643b-X",
+    // amount: total,
+    amount: 100,
+    currency: "USD",
+    tx_ref: new Date().toISOString(),
+    customer: {
+      //  email: localStorage.getItem("email"),
+      email: "inkplate@gmail.com",
+    },
+    customizations: {
+      title: "INKPLATE TECHNOLOGIES",
+    },
+    callback: async function () {
+      alert("Payment successful...We will reach out to you for further details")
+    },
+  })
 }
 
 const Card = ({
@@ -35,7 +66,7 @@ const Card = ({
   image,
   skewX,
   skewY,
-  btnUrl,
+  // btnUrl,
   alt,
   profileAlt,
 }: CardProps) => (
@@ -70,8 +101,8 @@ const Card = ({
           </div>
         </div>
 
-        <Link href={btnUrl} passHref>
-          <a target="_blank">
+        <Link href="#">
+          <a onClick={payNow}>
             <div className="xl:text-md hidden w-fit space-x-2 rounded-2xl bg-teal-600 px-2 py-3 text-sm font-semibold shadow-lg shadow-teal-500/20 transition-all duration-300 hover:bg-teal-700 xl:flex xl:px-4">
               {btnText}
             </div>
@@ -83,6 +114,12 @@ const Card = ({
 )
 
 const Hero = () => {
+  useEffect(() => {
+    const script = document.createElement("script")
+    script.src = "https://checkout.flutterwave.com/v3.js"
+    document.getElementsByTagName("head")[0].appendChild(script)
+  }, [])
+
   return (
     <>
       <div className="relative w-full">
@@ -132,7 +169,7 @@ const Hero = () => {
             btnText={topCard.btnText}
             profile={topCard.profile}
             image={topCard.image}
-            btnUrl={topCard.btnUrl}
+            // btnUrl={topCard.btnUrl}
             skewX="-skew-y-3 mt-24 z-10"
             skewY="skew-x-6"
             alt={topCard.alt}
@@ -145,7 +182,7 @@ const Hero = () => {
             btnText={backCard.btnText}
             profile={backCard.profile}
             image={backCard.image}
-            btnUrl={backCard.btnUrl}
+            // btnUrl={backCard.btnUrl}
             skewX="skew-y-3 -translate-x-20 animate-pulse"
             skewY="-skew-x-6"
             alt={backCard.alt}

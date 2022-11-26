@@ -52,7 +52,7 @@ export const topCard = {
     "https://lh3.googleusercontent.com/uRNiQu5_VpjhHoYy_QTvqOpIWs5QvSJ36hCrsGV4jP2YDJqIwfBVtR_XALDmmHHyFks6FC919AzvXv0J1AT4WlSEGM6VIODNt07snw=s130",
   image:
     "https://lh3.googleusercontent.com/10TjqBrdogu4jr8VIR7xEHDRujZNfgfohgK05EQZ-fAz-B3KHAX-fXK2XdPwOV9198d9YBeOI7MyK06RJXtZHPqlJTyNnWQzh_m7fw=w600",
-  btnUrl: "https://opensea.io/",
+  // btnUrl: "https://opensea.io/",
   alt: "Top Card",
   profileAlt: "My Profile 1",
 }
@@ -65,7 +65,7 @@ export const backCard = {
     "https://lh3.googleusercontent.com/uRNiQu5_VpjhHoYy_QTvqOpIWs5QvSJ36hCrsGV4jP2YDJqIwfBVtR_XALDmmHHyFks6FC919AzvXv0J1AT4WlSEGM6VIODNt07snw=s130",
   image:
     "https://lh3.googleusercontent.com/jfiHJIkvee0QbBbLShykdVSPJ_fNQGsHeUcBgwem4OXxb2MEA0lkqDzZM8BIWVI5E6836mtYFZ13_PhWdkiIuUvGitu5JGDABdzDjQ=w600",
-  btnUrl: "https://opensea.io/",
+  // btnUrl: "https://opensea.io/",
   alt: "Back Card",
   profileAlt: "My Profile 2",
 }

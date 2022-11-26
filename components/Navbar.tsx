@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import {
-  logo,
-  logoAlt,
+  // logo,
+  // logoAlt,
   discordUrl,
   instagramUrl,
   twitterUrl,
@@ -9,7 +9,7 @@ import {
   pages,
   mobileMenuHeading,
 } from "../constants/constants"
-import Image from "next/image"
+// import Image from "next/image"
 import Link from "next/link"
 import {
   FaInstagram,
