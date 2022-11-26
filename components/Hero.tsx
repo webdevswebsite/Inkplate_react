@@ -39,7 +39,8 @@ const payNow:any = (e: { preventDefault: () => void }) => {
     "Hi there! You about to proceed payment of USD100 for this Art as an inquiry/service fee, Click Ok to continue"
   )
   e.preventDefault()
-  return window.FlutterwaveCheckout({
+  
+  return (window as any).FlutterwaveCheckout({
     public_key: "FLWPUBK-00f1a8bfd678ad383f650cd6cccd643b-X",
     // amount: total,
     amount: 100,
