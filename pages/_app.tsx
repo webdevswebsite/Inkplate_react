@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <NextSeo
-        title="Inkplate | NFT Project"
+        title="Inkplate Art collection"
         description="Inkplate Technologies"
         
       />
