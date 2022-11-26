@@ -34,7 +34,7 @@ interface CardProps {
 //   document.getElementsByTagName("head")[0].appendChild(script)
 // }, [])
 
-const payNow:any = (e) => {
+const payNow:any = (e: { preventDefault: () => void }) => {
   alert(
     "Hi there! You about to proceed payment of USD100 for this Art as an inquiry/service fee, Click Ok to continue"
   )
